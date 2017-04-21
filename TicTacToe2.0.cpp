@@ -16,10 +16,8 @@ struct Board{
 	char f;
 	char g;
 	char h;
-	char i;
-	
+	char i;	
 };
-
 
 class Game{
 	private:
@@ -57,7 +55,6 @@ class Game{
 				Pos.i = player;
 			}
 		}
-		
 		bool validMove(int x){
 			if (x == 1){
 				if (isdigit(Pos.a) && (Pos.a != 'X' && Pos.a !='O')){
@@ -110,73 +107,191 @@ class Game{
 		bool isWinner(){
 			if (Pos.a = 'X' && Pos.b == 'X' && Pos.c == 'X'){
 				cout << endl << "Player 1 is the Winner!"<< endl;
+				Pos.d = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				Pos.g = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.d == 'X' && Pos.e == 'X' && Pos.f == 'X'){
 				cout << endl << "Player 1 is the Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.g = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.g == 'X' && Pos.h == 'X' && Pos.i == 'X'){
 				cout << endl << "Player 1 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.d = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.a == 'X' && Pos.d == 'X' && Pos.g == 'X'){
 				cout <<endl << "Player 1 is there Winner!" << endl;
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.b == 'X' && Pos.e == 'X' && Pos.h == 'X'){
 				cout <<endl << "Player 1 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.c = ' ';
+				Pos.f = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.c == 'X' && Pos.f == 'X' && Pos.i == 'X'){
 				cout <<endl << "Player 1 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.b = ' ';
+				Pos.e = ' ';
+				Pos.h = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.a == 'X' && Pos.e == 'X' && Pos.i == 'X'){
 				cout <<endl << "Player 1 is there Winner!" << endl;
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.b = ' ';
+				Pos.h = ' ';
+				Pos.c = ' ';
+				Pos.f = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.c == 'X' && Pos.e == 'X' && Pos.g == 'X'){
 				cout <<endl << "Player 1 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.d = ' ';
+				Pos.f = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}
 			////////////////////////////////////////////////////////////////
 			if (Pos.a = 'O' && Pos.b == 'O' && Pos.c == 'O'){
 				cout << endl << "Player 2 is the Winner!"<< endl;
+				Pos.d = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				Pos.g = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.d == 'O' && Pos.e == 'O' && Pos.f == 'O'){
 				cout << endl << "Player 2 is the Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.g = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.g == 'O' && Pos.h == 'O' && Pos.i == 'O'){
 				cout << endl << "Player 2 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.d = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				displayGrid();
 				return false;
 			}
 			if (Pos.a == 'O' && Pos.d == 'O' && Pos.g == 'O'){
 				cout <<endl << "Player 2 is there Winner!" << endl;
+				Pos.b = ' ';
+				Pos.c = ' ';
+				Pos.e = ' ';
+				Pos.f = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.b == 'O' && Pos.e == 'O' && Pos.h == 'O'){
 				cout <<endl << "Player 2 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.c = ' ';
+				Pos.f = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.c == 'O' && Pos.f == 'O' && Pos.i == 'O'){
 				cout <<endl << "Player 2 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.b = ' ';
+				Pos.e = ' ';
+				Pos.h = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.a == 'O' && Pos.e == 'O' && Pos.i == 'O'){
 				cout <<endl << "Player 2 is there Winner!" << endl;
+				Pos.d = ' ';
+				Pos.g = ' ';
+				Pos.b = ' ';
+				Pos.h = ' ';
+				Pos.c = ' ';
+				Pos.f = ' ';
+				displayGrid();
 				return false; 
 			}
 			if (Pos.c == 'O' && Pos.e == 'O' && Pos.g == 'O'){
 				cout <<endl << "Player 2 is there Winner!" << endl;
+				Pos.a = ' ';
+				Pos.b = ' ';
+				Pos.d = ' ';
+				Pos.f = ' ';
+				Pos.h = ' ';
+				Pos.i = ' ';
+				displayGrid();
 				return false; 
 			}else{ 
 				return true;
 			}
 		}
-			
+		bool catsGame(){	
+			if(!isdigit(Pos.a) && !isdigit(Pos.b) && !isdigit(Pos.c) && !isdigit(Pos.d) && !isdigit(Pos.e) && !isdigit(Pos.f) && !isdigit(Pos.g) && !isdigit(Pos.h) && !isdigit(Pos.i)){
+				return false;
+			}else{
+				return true;
+			}
+		}
 			
 		void displayGrid(){
 			cout << endl
@@ -219,8 +334,7 @@ int main(){
 			GameBoy.setMove(move, player);
 			GameBoy.displayGrid();	
 			check1 = GameBoy.isWinner();
-		}
-		if (count%2 == 0){
+		}else{
 			bool check3 = true;
 			int count3 = 0;
 			player = 'O';
@@ -237,8 +351,9 @@ int main(){
 			}
 			GameBoy.setMove(move, player);
 			GameBoy.displayGrid();	
-			check1 =GameBoy.isWinner();
+			check1 = GameBoy.isWinner();
 		}
 	count++;
+	check1 = GameBoy.catsGame();
 	}			
 }
