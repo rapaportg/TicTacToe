@@ -22,10 +22,8 @@ struct Board{
 class Game{
 	private:
 		string test;
-		
 	public:
 		Board Pos;
-	
 		void setMove(int x , char player){
 			if (x == 1){
 				Pos.a = player;
@@ -287,6 +285,7 @@ class Game{
 		}
 		bool catsGame(){	
 			if(!isdigit(Pos.a) && !isdigit(Pos.b) && !isdigit(Pos.c) && !isdigit(Pos.d) && !isdigit(Pos.e) && !isdigit(Pos.f) && !isdigit(Pos.g) && !isdigit(Pos.h) && !isdigit(Pos.i)){
+				cout << endl << "Its a Tie!" << endl;
 				return false;
 			}else{
 				return true;
